@@ -5,9 +5,8 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 WAIT_TIME = 60
@@ -15,74 +14,93 @@ WAIT_TIME = 60
 ROOT_FOLDER = Path(__file__).parent
 CHROMEDRIVER_EXEC = ROOT_FOLDER / 'drivers' / 'chromedriver.exe'
 
-options = webdriver.ChromeOptions()
-services = Service()
-options.add_argument("--incognito")
-browser = webdriver.Chrome(
-    service=services,
-    options=options,
-)
-
-browser.get('https://www.saucedemo.com/')
-
-username = WebDriverWait(browser, WAIT_TIME).until(
-    EC.presence_of_element_located(
-        (By.NAME, 'user-name')
+def setup_browser():
+    options = webdriver.ChromeOptions()
+    services = Service()
+    options.add_argument("--incognito")
+    browser = webdriver.Chrome(
+        service=services,
+        options=options,
     )
-)
-ActionChains(browser).click(username).pause(1.5).perform()
-username.send_keys('standard_user')
+    return browser
 
-password = WebDriverWait(browser, WAIT_TIME).until(
-    EC.presence_of_element_located(
-        (By.NAME, 'password')
+def perform_login(browser, username_val, password_val):
+    browser.get('https://www.saucedemo.com/')
+    
+    username_field = WebDriverWait(browser, WAIT_TIME).until(
+        EC.presence_of_element_located(
+            (By.NAME, 'user-name')
+        )
     )
-)
-ActionChains(browser).click(password).pause(1.5).perform()
-password.send_keys('secret_sauce')
+    ActionChains(browser).click(username_field).pause(0.5).perform()
+    username_field.send_keys(username_val)
 
-login = WebDriverWait(browser, WAIT_TIME).until(
-    EC.presence_of_element_located(
-        (By.NAME, 'login-button')
+    password_field = WebDriverWait(browser, WAIT_TIME).until(
+        EC.presence_of_element_located(
+            (By.NAME, 'password')
+        )
     )
-)
-ActionChains(browser).click(login).pause(1.5).perform()
+    ActionChains(browser).click(password_field).pause(0.5).perform()
+    password_field.send_keys(password_val)
 
-filter_class = WebDriverWait(browser, 60).until(
-    EC.presence_of_element_located(
-        (By.CLASS_NAME, 'product_sort_container')
+    login_button = WebDriverWait(browser, WAIT_TIME).until(
+        EC.presence_of_element_located(
+            (By.NAME, 'login-button')
+        )
     )
-)
-ActionChains(browser).click(filter_class).pause(1.5).perform()
-sort = Select(filter_class)
-sort.select_by_value('hilo')
+    ActionChains(browser).click(login_button).pause(1.5).perform()
 
-add_cart_high = WebDriverWait(browser, WAIT_TIME).until(
-    EC.presence_of_element_located(
-        (By.NAME, 'add-to-cart-sauce-labs-fleece-jacket')
+def add_and_filter_items(browser):
+    filter_class = WebDriverWait(browser, WAIT_TIME).until(
+        EC.presence_of_element_located(
+            (By.CLASS_NAME, 'product_sort_container')
+        )
     )
-)
-ActionChains(browser).click(add_cart_high).pause(1.5).perform()
+    ActionChains(browser).click(filter_class).pause(0.5).perform()
+    sort = Select(filter_class)
+    sort.select_by_value('hilo')
 
-add_cart_low = WebDriverWait(browser, WAIT_TIME).until(
-    EC.presence_of_element_located(
-        (By.NAME, 'add-to-cart-sauce-labs-onesie')
+    add_cart_high = WebDriverWait(browser, WAIT_TIME).until(
+        EC.presence_of_element_located(
+            (By.NAME, 'add-to-cart-sauce-labs-fleece-jacket')
+        )
     )
-)
-ActionChains(browser).click(add_cart_low).pause(1.5).perform()
+    ActionChains(browser).click(add_cart_high).pause(0.5).perform()
 
-menu = WebDriverWait(browser, WAIT_TIME).until(
-    EC.presence_of_element_located(
-        (By.ID, 'react-burger-menu-btn')
+    add_cart_low = WebDriverWait(browser, WAIT_TIME).until(
+        EC.presence_of_element_located(
+            (By.NAME, 'add-to-cart-sauce-labs-onesie')
+        )
     )
-)
-ActionChains(browser).click(menu).pause(1.5).perform()
+    ActionChains(browser).click(add_cart_low).pause(0.5).perform()
 
-logout = WebDriverWait(browser, WAIT_TIME).until(
-    EC.presence_of_element_located(
-        (By.ID, 'logout_sidebar_link')
+def perform_logout(browser):
+    menu = WebDriverWait(browser, WAIT_TIME).until(
+        EC.presence_of_element_located(
+            (By.ID, 'react-burger-menu-btn')
+        )
     )
-)
-ActionChains(browser).click(logout).pause(1.5).perform()
+    ActionChains(browser).click(menu).pause(1.0).perform()
 
-sleep(WAIT_TIME)
+    logout = WebDriverWait(browser, WAIT_TIME).until(
+        EC.presence_of_element_located(
+            (By.ID, 'logout_sidebar_link')
+        )
+    )
+    ActionChains(browser).click(logout).pause(1.0).perform()
+
+def run_e2e_test():
+    browser = setup_browser()
+    try:
+        perform_login(browser, 'standard_user', 'secret_sauce')
+        add_and_filter_items(browser)
+        perform_logout(browser)
+        print('Teste E2E finalizado com sucesso!')
+    except Exception as e:
+        print(f'Teste falhou: {e}')
+    finally:
+        sleep(2)
+        browser.quit()
+
+if __name__ == '__main__':
+    run_e2e_test()
