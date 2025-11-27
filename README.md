@@ -1,29 +1,47 @@
-# Python Automations
+<h1 align="center">🐉 Python Automations</h1>
 
-This repository contains a collection of Python automations and experiments organized into folders.  
-They are focused on learning and practicing tools like Selenium, HTTP requests, and web scraping.
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-Automation-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/Stack-Selenium_·_Requests_·_BS4-0FA958?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Mode-Learning_in_Public-brightgreen?style=for-the-badge" />
+</p>
 
-## Folder overview
-
-- `.vscode/`  
-  Contains VS Code workspace configuration, including `settings.json` with theme, font, and formatting preferences used in these projects.
-
-- `selenium_/`  
-  Contains small Selenium exercises and automations (for example, logging into demo sites, clicking elements, sorting products, etc.).  
-  These are **not full production projects**, but focused scripts to practice browser automation concepts.
-
-- `web_scraping/`  
-  Contains examples related to HTTP requests and HTML parsing (e.g., using `requests` and `BeautifulSoup`).  
-  Again, these are **practice automations**, not complete applications, created to learn and document different scraping techniques.
-
-Each folder represents a different area of Python automation that helps me build experience step by step.
+<p align="center">
+  A lab for browser automation, HTTP experiments, and web scraping practice.
+</p>
 
 ---
 
-Feel free to explore each directory, run the examples, and follow my progress as I experiment with automation and web scraping.
+## Folder Overview
+
+- **`.vscode/`**  
+  VS Code workspace configuration, including `settings.json` with theme, font, and formatting preferences used while developing these automations.
+
+- **`selenium_/`**  
+  Small Selenium exercises and browser automations (logging into demo sites, clicking elements, sorting products, etc.).  
+  These are **focused practice scripts**, not full production-ready projects.
+
+- **`web_scraping/`**  
+  Examples involving HTTP requests and HTML parsing using libraries like `requests` and `BeautifulSoup`.  
+  The goal is to experiment with different scraping techniques and data extraction flows.
+
+Each folder explores a different area of automation and helps me build experience step by step.
+
+---
+
+## How to Use This Repo
+
+1. Choose a folder (`selenium_/` or `web_scraping/`) that matches what you want to explore.  
+2. Open the script or sub‑README (when available) to understand the goal of that automation.  
+3. Create a virtual environment, install the required libraries, and run the scripts locally to see the automations in action.
 
 ---
 
 ## Contact
 
-Connect with me on [LinkedIn](https://www.linkedin.com/in/vitor-de-padua/) or email me at [vitorprofissionalpp10@gmail.com](mailto:vitorprofissionalpp10@gmail.com).
+If you have suggestions, feedback, or ideas for new automations, feel free to reach out:
+
+- LinkedIn: [vitor-de-padua](https://www.linkedin.com/in/vitor-de-padua/)  
+- Email: [vitorprofissionalpp10@gmail.com](mailto:vitorprofissionalpp10@gmail.com)
+
+> 💡 _Experiment first, refactor later — that’s how better automations are born._
