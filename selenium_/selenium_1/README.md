@@ -1,15 +1,11 @@
 #            SauceDemo Login and Sorting Automation
 
-<p align="center">
-  <!-- Linguagem -->
-  <img src="https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-
-  <!-- IDE -->
-  <img src="https://img.shields.io/badge/IDE-VS_Code-0078D4?style=for-the-badge&logo=visualstudiocode&logoColor=white" />
-
-  <!-- Ferramentas / Stack extra -->
-  <img src="https://img.shields.io/badge/Automation-Selenium-43B02A?style=for-the-badge&logo=selenium&logoColor=white" />
-  <img src="https://img.shields.io/badge/Version_Control-Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
+<div align="center">
+  <img src="https://img.shields.io/badge/PYTHON-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/IDE-VS_CODE-0078D4?style=for-the-badge&logo=visualstudiocode&logoColor=white" />
+  <img src="https://img.shields.io/badge/AUTOMATION-SELENIUM-43B02A?style=for-the-badge&logo=selenium&logoColor=white" />
+  <img src="https://img.shields.io/badge/VERSION_CONTROL-GIT-F05032?style=for-the-badge&logo=git&logoColor=white" />
+</div>
 
 This project is a simple Selenium WebDriver exercise in Python that automates a full login and product-sorting flow on the demo e-commerce site <https://www.saucedemo.com>.
 
@@ -48,3 +44,9 @@ Install dependencies:
 
 
 ***The browser will open, perform the login, sort products by price, add two items to the cart, open the menu, log out, and then stay open for `WAIT_TIME` seconds before the script ends.***
+
+---
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Made_with❤️_by-Vitor_de_Padua-blueviolet?style=for-the-badge" />
+</p>
