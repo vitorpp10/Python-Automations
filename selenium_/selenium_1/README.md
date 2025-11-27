@@ -1,4 +1,4 @@
-#            SauceDemo Login and Sorting Automation
+# SauceDemo Login
 
 <div align="center">
   <img src="https://img.shields.io/badge/PYTHON-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white" />
