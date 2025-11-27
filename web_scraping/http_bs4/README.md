@@ -43,6 +43,8 @@ parsed_html = BeautifulSoup(bytes_html, 'html.parser', from_encoding='utf-8')
 
 ***You can extend this script to query specific elements from the parsed HTML (titles, links, product cards, etc.) and process them according to your scraping goal.***
 
+***If you are setting this project up for the first time, make sure to read `tutorial.txt`.  
+It contains a detailed guide on creating the virtual environment, starting the HTTP server, and running the script.***
 ---
 
 <p align="center">
