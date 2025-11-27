@@ -43,5 +43,3 @@ If you have suggestions, feedback, or ideas for new automations, feel free to re
 
 - LinkedIn: [vitor-de-padua](https://www.linkedin.com/in/vitor-de-padua/)  
 - Email: [vitorprofissionalpp10@gmail.com](mailto:vitorprofissionalpp10@gmail.com)
-
-> 💡 _Experiment first, refactor later — that’s how better automations are born._
