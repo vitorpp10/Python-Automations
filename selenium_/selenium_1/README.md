@@ -80,19 +80,12 @@ text
 1. **Clone or download** this project.  
 2. Make sure `chromedriver.exe` is inside the `drivers` folder at the project root.  
 3. (Optional) Create and activate a virtual environment.  
-4. Run the script:
+4. Run the script: `python main.py`
 
-python main.py
+If everything goes well, you should see a message in the terminal: `Teste E2E finalizado com sucesso!`
 
-text
 
-If everything goes well, you should see a message in the terminal:
-
-Teste E2E finalizado com sucesso!
-
-text
-
-The browser will open, log in, sort by price, add two products to the cart, log out and then close after a short delay.
+*The browser will open, log in, sort by price, add two products to the cart, log out and then close after a short delay.*
 
 ---
 
