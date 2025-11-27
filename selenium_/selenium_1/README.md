@@ -1,10 +1,6 @@
 #            SauceDemo Login and Sorting Automation
 
-
-
-
-
-
+---
 
 <p align="center">
   <!-- Linguagem -->
