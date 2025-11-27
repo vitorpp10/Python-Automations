@@ -5,8 +5,6 @@
   <img src="https://img.shields.io/badge/HTTP-requests-FF6C37?style=for-the-badge" />
   <img src="https://img.shields.io/badge/PARSING-BeautifulSoup-4B8BBE?style=for-the-badge" />
   <img src="https://img.shields.io/badge/WEB_SCRAPING-Local_HTML-008000?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/IDE-VS_CODE-0078D4?style=for-the-badge&logo=visualstudiocode&logoColor=white" />
-  <img src="https://img.shields.io/badge/VERSION_CONTROL-GIT-F05032?style=for-the-badge&logo=git&logoColor=white" />
 </div>
 
 This project is a small web scraping exercise using `requests` and `BeautifulSoup` to parse a local HTML page served on `http://localhost:3333/`.
@@ -24,17 +22,16 @@ This project is a small web scraping exercise using `requests` and `BeautifulSou
 
 ## main.py (raw code)
 
+```
 import requests
 from bs4 import BeautifulSoup
-
 url = 'http://localhost:3333/'
 response = requests.get(url)
 raw_html = response.text
 parsed_html = BeautifulSoup(raw_html, 'html.parser')
 bytes_html = response.content
 parsed_html = BeautifulSoup(bytes_html, 'html.parser', from_encoding='utf-8')
-
-text
+```
 
 ## What the script does
 
@@ -44,4 +41,10 @@ text
   - First using the raw text and the `html.parser` backend.
   - Then using the raw bytes with explicit `from_encoding='utf-8'` to ensure proper character decoding.
 
-You can extend this script to query specific elements from the parsed HTML (titles, links, product cards, etc.) and process them according to your scraping goal.
+***You can extend this script to query specific elements from the parsed HTML (titles, links, product cards, etc.) and process them according to your scraping goal.***
+
+---
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Made_with❤️_by-Vitor_de_Padua-blueviolet?style=for-the-badge" />
+</p>
