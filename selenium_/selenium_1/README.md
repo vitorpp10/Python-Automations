@@ -7,8 +7,6 @@
   <img src="https://img.shields.io/badge/VERSION_CONTROL-GIT-F05032?style=for-the-badge&logo=git&logoColor=white" />
 </div>
 
----
-
 This project is a simple Selenium WebDriver exercise in Python that automates a full login and product-sorting flow on the demo e-commerce site <https://www.saucedemo.com>.
 
 ## What the script does
