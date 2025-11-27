@@ -4,7 +4,6 @@
   <img src="https://img.shields.io/badge/PYTHON-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white" />
   <img src="https://img.shields.io/badge/IDE-VS_CODE-0078D4?style=for-the-badge&logo=visualstudiocode&logoColor=white" />
   <img src="https://img.shields.io/badge/AUTOMATION-SELENIUM-43B02A?style=for-the-badge&logo=selenium&logoColor=white" />
-  <img src="https://img.shields.io/badge/VERSION_CONTROL-GIT-F05032?style=for-the-badge&logo=git&logoColor=white" />
 </div>
 
 This project is a simple Selenium WebDriver exercise in Python that automates a full login and product-sorting flow on the demo e-commerce site <https://www.saucedemo.com>.
