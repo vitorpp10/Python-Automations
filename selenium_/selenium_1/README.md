@@ -1,4 +1,4 @@
-# SauceDemo Login
+<h1 align="center"> SauceDemo Login E2E</h1>
 
 <div align="center">
   <img src="https://img.shields.io/badge/PYTHON-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white" />
@@ -7,43 +7,92 @@
   <img src="https://img.shields.io/badge/VERSION_CONTROL-GIT-F05032?style=for-the-badge&logo=git&logoColor=white" />
 </div>
 
-This project is a simple Selenium WebDriver exercise in Python that automates a full login and product-sorting flow on the demo e-commerce site <https://www.saucedemo.com>.
+<p align="center">
+  End‑to‑end Selenium test that logs into SauceDemo, sorts products, adds items to the cart and logs out.
+</p>
 
-## What the script does
+---
 
-- Opens Google Chrome in incognito mode and navigates to the SauceDemo login page.
-- Logs in using the demo credentials `standard_user` and `secret_sauce`.
-- Selects the product sort option **"Price (high to low)"** using the dropdown with class `product_sort_container`.
-- Adds the most expensive item (`sauce-labs-fleece-jacket`) and the cheapest item (`sauce-labs-onesie`) to the cart.
-- Opens the burger menu and logs out of the application, then waits before closing the browser.
+## Overview
 
-## Project structure
+This project is a small Selenium WebDriver E2E test written in Python.  
+It follows a **function‑based structure** to keep each action of the flow isolated and easy to reuse:
 
-- `drivers/chromedriver.exe` – ChromeDriver binary path used by Selenium.
-- `your_script.py` – Main automation script (the file containing the code above).
-- `venv/` – Optional virtual environment folder for dependency management.
+- `setup_browser()` – starts a Chrome browser in incognito mode.  
+- `perform_login()` – logs into SauceDemo with `standard_user` / `secret_sauce`.  
+- `add_and_filter_items()` – sorts products by **Price (high to low)** and adds two items to the cart.  
+- `perform_logout()` – opens the burger menu and logs out.  
+- `run_e2e_test()` – orchestrates the full test and handles success/failure.
+
+---
+
+## Flow Details
+
+The script performs the following end‑to‑end scenario:
+
+1. Open Chrome in **incognito** mode.  
+2. Navigate to `https://www.saucedemo.com/`.  
+3. Wait for the username and password fields, type credentials and click the login button.  
+4. Use the `product_sort_container` dropdown to select `hilo` (**Price (high to low)**).  
+5. Add:
+   - `sauce-labs-fleece-jacket` (most expensive item).  
+   - `sauce-labs-onesie` (cheapest item).  
+6. Open the burger menu and click **Logout**.  
+7. Print a success or failure message and close the browser gracefully.
+
+All interactions use `WebDriverWait`, `expected_conditions` and `ActionChains` for more reliable and realistic automation.
+
+---
+
+## Project Structure
+
+saucedemo_login/
+├── drivers/
+│ └── chromedriver.exe
+├── venv/ (optional – virtual environment)
+└── main.py (script with the functions and E2E flow)
+
+text
+
+- `drivers/chromedriver.exe` – ChromeDriver binary used by Selenium.  
+- `main.py` – contains `setup_browser`, `perform_login`, `add_and_filter_items`, `perform_logout` and `run_e2e_test`.  
+
+---
 
 ## Requirements
 
-- Python 3.10+
-- Google Chrome installed
-- Matching version of ChromeDriver placed in `drivers/chromedriver.exe`
-- Packages:
+- Python **3.10+**  
+- Google Chrome installed  
+- Matching version of **ChromeDriver** placed in `drivers/chromedriver.exe`  
+- Python package:
   - `selenium`
 
-Install dependencies:
+Install the dependency:
 
-`pip install selenium`
+pip install selenium
 
-## How to run
+text
 
-1. Clone or download this project.
-2. Ensure `chromedriver.exe` is inside the `drivers` folder at the project root.
-3. (Optional) Activate your virtual environment.
-4. Run the script: `python your_script.py`
+---
 
+## How to Run
 
-***The browser will open, perform the login, sort products by price, add two items to the cart, open the menu, log out, and then stay open for `WAIT_TIME` seconds before the script ends.***
+1. **Clone or download** this project.  
+2. Make sure `chromedriver.exe` is inside the `drivers` folder at the project root.  
+3. (Optional) Create and activate a virtual environment.  
+4. Run the script:
+
+python main.py
+
+text
+
+If everything goes well, you should see a message in the terminal:
+
+Teste E2E finalizado com sucesso!
+
+text
+
+The browser will open, log in, sort by price, add two products to the cart, log out and then close after a short delay.
 
 ---
 
