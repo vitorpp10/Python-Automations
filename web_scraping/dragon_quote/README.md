@@ -19,6 +19,7 @@ This project is an interactive Command Line Interface (CLI) tool that scrapes qu
 ```
 def main_scraper(url):
 global NEXT_PAGE
+
 try:
   response = requests.get(url, timeout=5)
   response.raise_for_status()
