@@ -1,9 +1,11 @@
 # Dragon Find Quotes 🐉
 
-![PYTHON-3.x](https://img.shields.io/badge/PYTHON-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![HTTP-requests](https://img.shields.io/badge/HTTP-requests-FF6C37?style=for-the-badge)
-![PARSING-BeautifulSoup](https://img.shields.io/badge/PARSING-BeautifulSoup-4B8BBE?style=for-the-badge)
-![CLI_UX-Colorama](https://img.shields.io/badge/CLI_UX-Colorama-e01e5a?style=for-the-badge)
+<div align="center">
+  <img src="https://img.shields.io/badge/PYTHON-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/HTTP-requests-FF6C37?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/PARSING-BeautifulSoup-4B8BBE?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/CLI_UX-Colorama-e01e5a?style=for-the-badge" />
+</div>
 
 This project is an interactive Command Line Interface (CLI) tool that scrapes quotes from `http://quotes.toscrape.com/`. It combines web scraping logic with a stylized "Dragon" theme, offering pagination and error handling. [web:1]
 
