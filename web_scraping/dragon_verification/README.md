@@ -1,11 +1,4 @@
-# 🐉 Dragon URL Checker
-
-<div align="center">
-  <img src="https://img.shields.io/badge/PYTHON-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/HTTP-requests-FF6C37?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/ARG_Parser-argparse-2F4F4F?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/CLI_UX-Colorama-e01e5a?style=for-the-badge" />
-</div>
+# Dragon URL Checker
 
 This project is a Command Line Interface (CLI) tool designed to verify the connectivity status of any given website. It utilizes `argparse` for argument parsing and `requests` for connectivity checks, wrapped in a stylized "Dragon" theme with visual feedback.
 
@@ -51,9 +44,3 @@ except requests.exceptions.RequestException:
 ## Setup
 
 If you are setting up this project for the first time, install the required libraries: `pip install requests colorama`
-
----
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Made_with❤️_by-Vitor_de_Padua-blueviolet?style=for-the-badge" />
-</p>
