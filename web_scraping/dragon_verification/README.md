@@ -2,8 +2,8 @@
 
 <div align="center">
   <img src="https://img.shields.io/badge/PYTHON-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/HTTP-Requests-FF6C37?style=for-the-badge" />
-  <img src="https://www.google.com/url?sa=E&source=gmail&q=https://img.shields.io/badge/CLI-Argparse-yellow?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/HTTP-requests-FF6C37?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/PARSING-BeautifulSoup-4B8BBE?style=for-the-badge" />
   <img src="https://img.shields.io/badge/CLI_UX-Colorama-e01e5a?style=for-the-badge" />
 </div>
 
