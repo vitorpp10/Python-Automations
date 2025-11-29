@@ -1,4 +1,4 @@
-# 🐉 Dragon Find Quotes 
+# Dragon Find Quotes 
 
 This project is an interactive Command Line Interface (CLI) tool that scrapes quotes from `http://quotes.toscrape.com/`. It combines web scraping logic with a stylized "Dragon" theme, offering pagination and error handling.
 
