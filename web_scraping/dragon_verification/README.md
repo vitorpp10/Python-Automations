@@ -3,7 +3,7 @@
 <div align="center">
   <img src="https://img.shields.io/badge/PYTHON-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white" />
   <img src="https://img.shields.io/badge/HTTP-requests-FF6C37?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/PARSING-BeautifulSoup-4B8BBE?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/ARG_Parser-argparse-2F4F4F?style=for-the-badge" />
   <img src="https://img.shields.io/badge/CLI_UX-Colorama-e01e5a?style=for-the-badge" />
 </div>
 
