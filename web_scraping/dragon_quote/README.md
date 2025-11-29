@@ -40,8 +40,8 @@ except Exception as e:
 
 ## What the script does
 
-- Sends GET requests to `http://quotes.toscrape.com/` using the `requests` library. [web:1]
-- Parses the HTML response using `BeautifulSoup` to extract quote text, authors, and pagination links. [web:5]
+- Sends GET requests to `http://quotes.toscrape.com/` using the `requests` library.
+- Parses the HTML response using `BeautifulSoup` to extract quote text, authors, and pagination links.
 - Implements a paginated navigation system, allowing the user to move to the "Next Page" directly from the terminal.
 - Provides a robust CLI UX using `colorama` for colors, typing effects (`p()` function), and conditional screen clearing.
 - Handles errors gracefully, ensuring the application does not crash on invalid inputs or connection issues.
