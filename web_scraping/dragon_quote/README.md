@@ -16,6 +16,7 @@ This project is an interactive Command Line Interface (CLI) tool that scrapes qu
 
 ## `dragon_quotes.py` (core logic)
 
+```
 def main_scraper(url):
 global NEXT_PAGE
 try:
@@ -35,7 +36,7 @@ text
     return all_quotes
 except Exception as e:
     sys.exit()
-text
+```
 
 ## What the script does
 
@@ -47,18 +48,14 @@ text
 
 ## Possible extensions
 
-You can extend this script to include features such as:
+***You can extend this script to include features such as:***
 
-- Saving favorite quotes to a database (SQLite).
-- Filtering quotes by specific tags.
+- *Saving favorite quotes to a database (SQLite)*.
+- *Filtering quotes by specific tags*.
 
 ## Setup
 
-If you are setting up this project for the first time, install the required libraries:
-
-pip install requests beautifulsoup4 colorama
-
-text
+If you are setting up this project for the first time, install the required libraries: `pip install requests beautifulsoup4 colorama`
 
 ---
 
