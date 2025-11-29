@@ -20,20 +20,19 @@ This project is an interactive Command Line Interface (CLI) tool that scrapes qu
 def main_scraper(url):
 global NEXT_PAGE
 try:
-response = requests.get(url, timeout=5)
-response.raise_for_status()
-parsed_html = BeautifulSoup(response.text, 'html.parser')
-
-text
-    all_quotes = parsed_html.find_all('div', class_='quote')
-    next_button = parsed_html.find('li', class_='next')
-
-    if next_button:
-        NEXT_PAGE = next_button.find('a')['href']
-    else:
-        NEXT_PAGE = None
-    
-    return all_quotes
+  response = requests.get(url, timeout=5)
+  response.raise_for_status()
+  parsed_html = BeautifulSoup(response.text, 'html.parser')
+  
+  all_quotes = parsed_html.find_all('div', class_='quote')
+  next_button = parsed_html.find('li', class_='next')
+  
+  if next_button:
+    NEXT_PAGE = next_button.find('a')['href']
+  else:
+    NEXT_PAGE = None
+      
+  return all_quotes
 except Exception as e:
     sys.exit()
 ```
