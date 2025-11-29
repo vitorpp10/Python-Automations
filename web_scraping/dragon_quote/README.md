@@ -50,9 +50,3 @@ except Exception as e:
 ## Setup
 
 If you are setting up this project for the first time, install the required libraries: `pip install requests beautifulsoup4 colorama`
-
----
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Made_with❤️_by-Vitor_de_Padua-blueviolet?style=for-the-badge" />
-</p>
