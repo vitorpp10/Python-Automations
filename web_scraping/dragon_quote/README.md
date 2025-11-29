@@ -59,4 +59,6 @@ If you are setting up this project for the first time, install the required libr
 
 ---
 
-![Made_with_heart](https://img.shields.io/badge/Made_with❤️_by-Vitor_de_Padua-blueviolet?style=for-the-badge)
+<p align="center">
+  <img src="https://img.shields.io/badge/Made_with❤️_by-Vitor_de_Padua-blueviolet?style=for-the-badge" />
+</p>
