@@ -1,15 +1,6 @@
 <h1 align="center"> SauceDemo Login E2E</h1>
 
-<div align="center">
-  <img src="https://img.shields.io/badge/PYTHON-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/IDE-VS_CODE-0078D4?style=for-the-badge&logo=visualstudiocode&logoColor=white" />
-  <img src="https://img.shields.io/badge/AUTOMATION-SELENIUM-43B02A?style=for-the-badge&logo=selenium&logoColor=white" />
-  <img src="https://img.shields.io/badge/VERSION_CONTROL-GIT-F05032?style=for-the-badge&logo=git&logoColor=white" />
-</div>
-
-<p align="center">
-  End‑to‑end Selenium test that logs into SauceDemo, sorts products, adds items to the cart and logs out.
-</p>
+End‑to‑end Selenium test that logs into SauceDemo, sorts products, adds items to the cart and logs out.
 
 ---
 
@@ -86,9 +77,3 @@ If everything goes well, you should see a message in the terminal: `Teste E2E fi
 
 
 *The browser will open, log in, sort by price, add two products to the cart, log out and then close after a short delay.*
-
----
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Made_with❤️_by-Vitor_de_Padua-blueviolet?style=for-the-badge" />
-</p>
