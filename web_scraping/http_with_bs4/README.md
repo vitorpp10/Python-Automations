@@ -1,12 +1,5 @@
 # HTTP + BeautifulSoup Scraping Demo
 
-<div align="center">
-  <img src="https://img.shields.io/badge/PYTHON-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/HTTP-requests-FF6C37?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/PARSING-BeautifulSoup-4B8BBE?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/WEB_SCRAPING-Local_HTML-008000?style=for-the-badge" />
-</div>
-
 This project is a small web scraping exercise using `requests` and `BeautifulSoup` to parse a local HTML page served on `http://localhost:3333/`.
 
 ## Files
@@ -47,9 +40,3 @@ parsed_html = BeautifulSoup(bytes_html, 'html.parser', from_encoding='utf-8')
 
 If you are setting this project up for the first time, make sure to read `tutorial.txt`.
 It contains a detailed guide on creating the virtual environment, starting the HTTP server, and running the script.
-
----
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Made_with❤️_by-Vitor_de_Padua-blueviolet?style=for-the-badge" />
-</p>
